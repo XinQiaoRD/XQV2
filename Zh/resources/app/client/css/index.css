@@ -1,0 +1,15 @@
+﻿@charset "utf-8";
+
+/*Index*/
+#Index{
+    background: url("../img/index.png")
+}
+#Index .btn{
+    position: absolute; width: 412px; height: 292px;
+}
+#Index .btn1{ left:260px; top: 260px; }
+#Index .btn2{ left:754px; top: 260px; }
+#Index .btn3{ left:1248px; top: 260px; }
+#Index .btn4{ left:260px; top: 593px; }
+#Index .btn5{ left:754px; top: 593px; }
+#Index .btn6{ left:1248px; top: 593px; }

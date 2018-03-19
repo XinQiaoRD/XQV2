@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<!--终端框架结构 ; verson 1.2.0 ; verson-data 2015-12-18-->
+<html>
+<head lang="cn">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>互动多媒体系统</title>
+
+    <link rel="stylesheet" href="css/inc.css">
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body ondragstart="return false" onselect="return false" onselectstart="return false" oncontextmenu="return false">
+<div id="CC">
+<!-- style="transform:scale(0.5); transform-origin: top left;" -->
+    <div id="_unable"></div>
+
+    <section class="cc" id="Loader">
+        <img src="../../assets/img/loader.svg" width="88" alt="">
+        <div class="word"></div>
+    </section>
+
+    <section class="cc" id="Index">
+
+        <div class="btn btn1"></div>
+        <div class="btn btn2"></div>
+        <div class="btn btn3"></div>
+        <div class="btn btn4"></div>
+        <div class="btn btn5"></div>
+        <div class="btn btn6"></div>
+
+    </section>
+
+    <section class="cc" id="Video1">
+        <video src="../../assets/video/v1.mp4"></video>
+    </section>
+    <section class="cc" id="Video2">
+        <video src="../../assets/video/v2.mp4"></video>
+    </section>
+    <section class="cc" id="Video3">
+        <video src="../../assets/video/v3.mp4"></video>
+    </section>
+    <section class="cc" id="Video4">
+        <video src="../../assets/video/v4.mp4"></video>
+    </section>
+    <section class="cc" id="Video5">
+        <video src="../../assets/video/v5.mp4"></video>
+    </section>
+    <section class="cc" id="Video6">
+        <video src="../../assets/video/v6.mp4"></video>
+    </section>
+
+
+</div>
+
+</body>
+
+<!--基础插件-->
+<script>window.$ = window.jQuery = require('jquery');</script>
+<script src="lib/underscore.js"></script>
+<script src="lib/velocity/velocity.js"></script>
+
+<script src="lib/zh.js"></script>
+<script src="lib/zh_media.js"></script>
+
+<!--主程序-->
+<script src="../../assets/config.js"></script>
+<script src="js/init.js"></script>
+<!--<script src="js/server.js"></script>-->
+<!--<script src="js/mp3.js"></script>-->
+
+<!--模块程序-->
+<script src="js/index.js"></script>
+
+<script>
+    $(window).load(()=>init.loader());
+    document.getElementById("CC").addEventListener('touchmove', function(event){
+        event.preventDefault();
+        event.stopPropagation();
+    });
+</script>
+
+</html>
