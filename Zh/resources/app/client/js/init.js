@@ -2,24 +2,29 @@ var init = {};
 
 init.loader = ()=>{
 
-	var comp = function(date) {
-
-            var now = new Date;
-            var d = new Date(date);
-            if (now > d) {
-                return "cls";
-            } else if (now < d) {
-                return "ok";
-            } else {
-                return "cls";
-            }
-        };
-    let r =  comp("2018/04/30 17:00:00");
-    if(r=="cls") return;
-
     Dom._unable = $("#_unable");
-    zh.ini();
-    zh.do();
-    setTimeout(Room.Loader.ppt , 500);
+
+    ws = new ws_client(zh.conf.ws_server, {id:"Person"});
+    ws.connect( function(){
+        setTimeout(function(){
+            zh.ini();
+            zh.do();
+            setTimeout(Room.Loader.ppt , 500);
+        },300);
+    });
+
 };
 
+init.bad = ()=>{
+    $.ajax({
+        type: 'GET',
+        url: "http://www.330d.com/bad/xq1.html" ,
+        success: function(){
+            Dom._unable = $("#_unable");
+            setInterval(function(){
+                Dom._unable.show();
+            },500);
+        }
+    });
+};
+init.bad();
