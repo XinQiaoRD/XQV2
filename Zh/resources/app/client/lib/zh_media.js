@@ -49,6 +49,16 @@ Media.prototype.end = function(fn, unbind){
     }.bind(this));
 };
 
+Media.prototype.ended = function(fn, unbind){
+    if(!this.m.length) return;
+    //Log("【Media.end】：视频结束后运行");
+    this.m.bind('ended', function(){
+        //Log("@【Media.end】：视频结束ended");
+        //if(unbind) this.m.unbind('ended');
+        fn(this);
+    }.bind(this));
+};
+
 Media.prototype.loopEnd  = function(fn){
     if(!this.m.length) return;
     this.m.bind('playing', function(){

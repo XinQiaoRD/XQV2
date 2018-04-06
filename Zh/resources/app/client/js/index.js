@@ -12,32 +12,32 @@ Room.Index = {};
 Room.Index.dom = ()=>{
 
     Dom.Video1 = new Media("#Video1 video");
-    Dom.Video1.end(function(v){
+    Dom.Video1.ended(function(v){
         Room.Index.ppt_back();
     });
 
     Dom.Video2 = new Media("#Video2 video");
-    Dom.Video2.end(function(v){
+    Dom.Video2.ended(function(v){
         Room.Index.ppt_back();
     });
 
     Dom.Video3 = new Media("#Video3 video");
-    Dom.Video3.end(function(v){
+    Dom.Video3.ended(function(v){
         Room.Index.ppt_back();
     });
 
     Dom.Video4 = new Media("#Video4 video");
-    Dom.Video4.end(function(v){
+    Dom.Video4.ended(function(v){
         Room.Index.ppt_back();
     });
 
     Dom.Video5 = new Media("#Video5 video");
-    Dom.Video5.end(function(v){
+    Dom.Video5.ended(function(v){
         Room.Index.ppt_back();
     });
 
     Dom.Video6 = new Media("#Video6 video");
-    Dom.Video6.end(function(v){
+    Dom.Video6.ended(function(v){
         Room.Index.ppt_back();
     });
 
